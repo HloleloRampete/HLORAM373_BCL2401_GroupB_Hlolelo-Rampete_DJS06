@@ -8,8 +8,9 @@ const names = ['Ashwin', 'Sibongile', 'Jan-Hendrik', 'Sifso', 'Shailen', 'Frikki
 provinces.forEach(province => console.log(province));
 names.forEach(name => console.log(name));
 
-
-
+// Log uppercase transformation of provinves 
+const uppercaseProvinces = provinces.map(province => province.toUpperCase());
+console.log(uppercaseProvinces);
 
 // A list of products with prices:
 const products = [
