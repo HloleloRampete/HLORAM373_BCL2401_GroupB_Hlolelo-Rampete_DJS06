@@ -24,6 +24,10 @@ console.log(provinces);
 const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
 console.log('Number of provinces without "Cape":', filteredProvinces.length);
 
+// Create a boolean array using map and some to determine if a name contains the letter 'S'
+const namesContainS = names.map(name => name.includes('S'));
+console.log(namesContainS);
+
 // A list of products with prices:
 const products = [
   { product: 'banana', price: "2" },
