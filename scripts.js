@@ -20,6 +20,10 @@ console.log(nameLengths);
 provinces.sort((a, b) => a.localeCompare(b));
 console.log(provinces);
 
+// Filter out the provinces containing "Cape" and log the count of remaining provinces.
+const filteredProvinces = provinces.filter(province => !province.includes('Cape'));
+console.log('Number of provinces without "Cape":', filteredProvinces.length);
+
 // A list of products with prices:
 const products = [
   { product: 'banana', price: "2" },
