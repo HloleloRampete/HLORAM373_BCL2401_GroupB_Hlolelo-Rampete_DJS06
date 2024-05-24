@@ -16,6 +16,10 @@ console.log(uppercaseProvinces);
 const nameLengths = names.map(name => name.length);
 console.log(nameLengths);
 
+// Sort and log the provinces alphabetically using the sort
+provinces.sort((a, b) => a.localeCompare(b));
+console.log(provinces);
+
 // A list of products with prices:
 const products = [
   { product: 'banana', price: "2" },
