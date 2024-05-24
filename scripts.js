@@ -56,4 +56,13 @@ console.log(
   // Use filter to create a new array with products whose names are 5 characters or fewer.
   products.filter((product) => product.product.length <= 5),
 
+  // 3. Price Manipulation
+  // Filter products to exclude those with empty prices.
+  // Map the remaining products to convert the price to a number.
+  // Use reduce to sum up the prices of the products.
+  products
+    .filter((product) => String(product.price).trim() !== "")
+    .map((product) => ({ ...product, price: Number(product.price) }))
+    .reduce((total, product) => total + product.price, 0),
+
 )
