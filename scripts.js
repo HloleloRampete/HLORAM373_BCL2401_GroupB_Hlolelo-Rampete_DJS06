@@ -28,6 +28,15 @@ console.log('Number of provinces without "Cape":', filteredProvinces.length);
 const namesContainS = names.map(name => name.includes('S'));
 console.log(namesContainS);
 
+// Initialize an empty object to store the name-province mappings
+const namesToProvinces = names.reduce((acc, name, index) => {
+  // Add a new key-value pair to the accumulator object for each name and its corresponding province
+  acc[name] = provinces[index];
+  // Return the accumulator object for the next iteration
+  return acc;
+}, {});
+console.log(namesToProvinces);
+
 // A list of products with prices:
 const products = [
   { product: 'banana', price: "2" },
