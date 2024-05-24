@@ -84,4 +84,10 @@ console.log(
   // 4. Concatenate Product Names
   // Use reduce to accumulate a string that includes all product names concatenated together.
   products.reduce((acc, product) => acc + product.product, "")
+
+  // 5. Find Extremes in Prices
+  // Filter and map products to ensure prices are numeric.
+  // Use reduce to find the product with the highest price.
+  // Use reduce to find the product with the lowest price.
+  // Return a formatted string with the names of the highest and lowest priced products.
 );
