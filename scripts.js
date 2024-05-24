@@ -66,7 +66,7 @@ const products = [
 console.log(
   // 1. Log Products
   // Use map to get an array of product names and join them into a single string separated by commas.
-  products.map((product) => product.product),
+  products.map((product) => product.product).join(", "),
 
   // 2. Filter by Name Length
   // Use filter to create a new array with products whose names are 5 characters or fewer.
@@ -83,7 +83,7 @@ console.log(
 
   // 4. Concatenate Product Names
   // Use reduce to accumulate a string that includes all product names concatenated together.
-  products.reduce((acc, product) => acc + product.product, "")
+  products.reduce((acc, product) => acc + product.product, ""),
 
   // 5. Find Extremes in Prices
   // Filter and map products to ensure prices are numeric.
@@ -101,7 +101,7 @@ console.log(
       product.price < min.price ? product : min
     );
     return `Highest: ${highest.product}. Lowest: ${lowest.product}.`;
-  })(), 
+  })(),
 
   // 6. Object Transformation
   // Use reduce to transform the products array into a new array with objects having 'name' and 'cost' keys.
@@ -109,5 +109,4 @@ console.log(
     acc.push({ name: product, cost: price });
     return acc;
   }, [])
-
 );
