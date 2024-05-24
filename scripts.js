@@ -90,4 +90,16 @@ console.log(
   // Use reduce to find the product with the highest price.
   // Use reduce to find the product with the lowest price.
   // Return a formatted string with the names of the highest and lowest priced products.
+  (() => {
+    const pricedProducts = products
+      .filter((product) => String(product.price).trim() !== "")
+      .map((product) => ({ ...product, price: Number(product.price) }));
+    const highest = pricedProducts.reduce((max, product) =>
+      product.price > max.price ? product : max
+    );
+    const lowest = pricedProducts.reduce((min, product) =>
+      product.price < min.price ? product : min
+    );
+    return `Highest: ${highest.product}. Lowest: ${lowest.product}.`;
+  })(), 
 );
