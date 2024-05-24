@@ -102,4 +102,12 @@ console.log(
     );
     return `Highest: ${highest.product}. Lowest: ${lowest.product}.`;
   })(), 
+
+  // 6. Object Transformation
+  // Use reduce to transform the products array into a new array with objects having 'name' and 'cost' keys.
+  products.reduce((acc, { product, price }) => {
+    acc.push({ name: product, cost: price });
+    return acc;
+  }, [])
+
 );
