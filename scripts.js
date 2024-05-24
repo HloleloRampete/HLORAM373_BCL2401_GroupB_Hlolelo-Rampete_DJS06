@@ -51,4 +51,9 @@ console.log(
   // 1. Log Products
   // Use map to get an array of product names and join them into a single string separated by commas.
   products.map((product) => product.product),
+
+  // 2. Filter by Name Length
+  // Use filter to create a new array with products whose names are 5 characters or fewer.
+  products.filter((product) => product.product.length <= 5),
+
 )
