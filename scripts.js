@@ -47,3 +47,8 @@ const products = [
   { product: 'tea', price: '' },
 ]
 
+console.log(
+  // 1. Log Products
+  // Use map to get an array of product names and join them into a single string separated by commas.
+  products.map((product) => product.product),
+)
